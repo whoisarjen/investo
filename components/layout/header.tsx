@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { Button } from '@/components/ui';
 
@@ -84,6 +85,13 @@ export function Header({ className = '' }: HeaderProps) {
           className="flex items-center gap-2 transition-opacity hover:opacity-80"
           onClick={closeMobileMenu}
         >
+          <Image
+            src="/logo.png"
+            alt="Investo"
+            width={32}
+            height={32}
+            className="h-8 w-8"
+          />
           <span className="text-xl font-bold text-gray-900 dark:text-white">
             investo
           </span>
